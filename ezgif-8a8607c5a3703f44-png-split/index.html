@@ -15,23 +15,23 @@
     }
 
     :root {
-      --accent: #E50914;
-      --accent-hover: #ff2a2a;
-      --accent-glow: rgba(229, 9, 20, 0.45);
-      --accent-subtle: rgba(229, 9, 20, 0.14);
+      --accent: #00D2FF;
+      --accent-hover: #38E1FF;
+      --accent-glow: rgba(0, 210, 255, 0.45);
+      --accent-subtle: rgba(0, 210, 255, 0.14);
       --text-main: #FFFFFF;
-      --text-muted: #B3B3B3;
+      --text-muted: #94A3B8;
     }
 
     html {
-      background-color: #090909;
+      background-color: #060b13;
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: #090909;
+      background-color: #060b13;
       overflow-x: hidden;
       overflow-y: scroll;
       min-height: 600vh;
@@ -43,17 +43,17 @@
       width: 7px;
     }
     ::-webkit-scrollbar-track {
-      background: #090909;
+      background: #060b13;
     }
     ::-webkit-scrollbar-thumb {
-      background: #444444;
+      background: #1e2e42;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #666666;
+      background: #00D2FF;
     }
 
-    /* Fixed Background Canvas for 4K Scroll Animation */
+            /* Fixed Background Canvas Scroll Animation Layer */
     #animation-canvas {
       position: fixed;
       top: 0;
@@ -63,8 +63,12 @@
       display: block;
       z-index: 0;
       pointer-events: none;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
+      background-color: #060b13;
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      image-rendering: auto;
     }
 
     /* Main Content Container Layer */
@@ -83,9 +87,9 @@
       align-items: center;
       justify-content: center;
       padding: 12px 32px;
-      background: rgba(10, 10, 10, 0.4);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(6, 13, 22, 0.45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 9999px;
       position: sticky;
@@ -198,8 +202,8 @@
       font-weight: 600;
       letter-spacing: -0.2px;
       transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     }
 
@@ -221,17 +225,17 @@
     }
 
     .social-link.resume-btn {
-      background: linear-gradient(135deg, rgba(229, 9, 20, 0.28), rgba(229, 9, 20, 0.08));
-      border: 1px solid rgba(229, 9, 20, 0.55);
+      background: linear-gradient(135deg, rgba(0, 210, 255, 0.28), rgba(0, 210, 255, 0.08));
+      border: 1px solid rgba(0, 210, 255, 0.55);
       color: #FFFFFF;
-      box-shadow: 0 4px 18px rgba(229, 9, 20, 0.3);
+      box-shadow: 0 4px 18px rgba(0, 210, 255, 0.3);
     }
 
     .social-link.resume-btn:hover {
       background: var(--accent);
       border-color: var(--accent);
       color: #FFFFFF;
-      box-shadow: 0 8px 25px rgba(229, 9, 20, 0.65);
+      box-shadow: 0 8px 25px rgba(0, 210, 255, 0.65);
       transform: translateY(-3px) scale(1.03);
     }
 
@@ -314,7 +318,7 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 12px;
-      text-shadow: 0 0 14px rgba(229, 9, 20, 0.5);
+      text-shadow: 0 0 14px rgba(0, 210, 255, 0.5);
     }
 
     .projects-title {
@@ -329,7 +333,7 @@
 
     .accent-red {
       color: var(--accent);
-      text-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+      text-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
     }
 
     .projects-subtitle {
@@ -360,8 +364,8 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       font-family: inherit;
     }
 
@@ -375,7 +379,7 @@
       background: var(--accent);
       border-color: var(--accent);
       color: #FFFFFF;
-      box-shadow: 0 4px 18px rgba(229, 9, 20, 0.45);
+      box-shadow: 0 4px 18px rgba(0, 210, 255, 0.45);
     }
 
     /* 3-Column Projects Grid */
@@ -389,10 +393,10 @@
     .project-card {
       position: relative;
       border-radius: 20px;
-      background: rgba(14, 14, 16, 0.84);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(6, 14, 24, 0.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(56, 189, 248, 0.16);
       padding: 18px;
       display: flex;
       flex-direction: column;
@@ -407,8 +411,8 @@
     /* Hover effect: box becomes a little bit bigger & red border glow */
     .project-card:hover {
       transform: translateY(-8px) scale(1.02);
-      border-color: rgba(229, 9, 20, 0.65);
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(229, 9, 20, 0.25);
+      border-color: rgba(0, 210, 255, 0.65);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(0, 210, 255, 0.25);
     }
 
     .card-preview {
@@ -444,9 +448,9 @@
       font-weight: 700;
       letter-spacing: 0.3px;
       text-transform: uppercase;
-      background: rgba(229, 9, 20, 0.14);
-      color: #FF5252;
-      border: 1px solid rgba(229, 9, 20, 0.32);
+      background: rgba(0, 210, 255, 0.14);
+      color: #38BDF8;
+      border: 1px solid rgba(0, 210, 255, 0.32);
     }
 
     .card-title {
@@ -484,8 +488,8 @@
     }
 
     .card-highlights[open] {
-      border-color: rgba(229, 9, 20, 0.3);
-      background: rgba(229, 9, 20, 0.04);
+      border-color: rgba(0, 210, 255, 0.3);
+      background: rgba(0, 210, 255, 0.04);
     }
 
     .highlights-toggle {
@@ -569,7 +573,8 @@
       gap: 8px;
       padding: 9px 16px;
       background: var(--accent);
-      color: #FFFFFF;
+      color: #040911;
+      font-weight: 700;
       border-radius: 8px;
       font-size: 13px;
       font-weight: 700;
@@ -579,7 +584,7 @@
 
     .btn-primary-action:hover {
       background: var(--accent-hover);
-      box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.5);
       transform: translateY(-1px);
     }
 
@@ -637,7 +642,7 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 12px;
-      text-shadow: 0 0 14px rgba(229, 9, 20, 0.5);
+      text-shadow: 0 0 14px rgba(0, 210, 255, 0.5);
     }
 
     .section-eyebrow-decorated::before,
@@ -681,10 +686,10 @@
     .skill-card {
       position: relative;
       border-radius: 20px;
-      background: rgba(14, 14, 16, 0.84);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(229, 9, 20, 0.28);
+      background: rgba(6, 14, 24, 0.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(0, 210, 255, 0.28);
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -695,8 +700,8 @@
 
     .skill-card:hover {
       transform: translateY(-8px) scale(1.02);
-      border-color: rgba(229, 9, 20, 0.65);
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(229, 9, 20, 0.25);
+      border-color: rgba(0, 210, 255, 0.65);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(0, 210, 255, 0.25);
     }
 
     .skill-card-header {
@@ -710,14 +715,14 @@
       width: 48px;
       height: 48px;
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(229, 9, 20, 0.22), rgba(229, 9, 20, 0.05));
-      border: 1px solid rgba(229, 9, 20, 0.4);
+      background: linear-gradient(135deg, rgba(0, 210, 255, 0.22), rgba(0, 210, 255, 0.05));
+      border: 1px solid rgba(0, 210, 255, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #FF4D5A;
+      color: #38BDF8;
       flex-shrink: 0;
-      box-shadow: 0 4px 15px rgba(229, 9, 20, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
     }
 
     .skill-card-text {
@@ -763,10 +768,10 @@
     }
 
     .skill-pill:hover {
-      background: rgba(229, 9, 20, 0.14);
-      border-color: rgba(229, 9, 20, 0.45);
+      background: rgba(0, 210, 255, 0.14);
+      border-color: rgba(0, 210, 255, 0.45);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 210, 255, 0.2);
     }
 
     .skill-pill svg {
@@ -817,10 +822,10 @@
       gap: 16px;
       padding: 18px 22px;
       border-radius: 16px;
-      background: rgba(14, 14, 16, 0.84);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(6, 14, 24, 0.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(56, 189, 248, 0.16);
       color: #FFFFFF;
       text-decoration: none;
       transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -829,8 +834,8 @@
 
     .contact-card-link:hover {
       transform: translateY(-4px) scale(1.02);
-      border-color: rgba(229, 9, 20, 0.6);
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(229, 9, 20, 0.25);
+      border-color: rgba(0, 210, 255, 0.6);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 210, 255, 0.25);
     }
 
     .contact-icon-box {
@@ -850,8 +855,8 @@
     .contact-card-link:hover .contact-icon-box {
       background: var(--accent);
       border-color: var(--accent);
-      color: #FFFFFF;
-      box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+      color: #040911;
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
     }
 
     .contact-card-text {
@@ -886,10 +891,10 @@
 
     .contact-form-container {
       border-radius: 20px;
-      background: rgba(14, 14, 16, 0.84);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(229, 9, 20, 0.28);
+      background: rgba(6, 14, 24, 0.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(0, 210, 255, 0.28);
       padding: 28px;
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
     }
@@ -937,7 +942,7 @@
     .form-field textarea:focus {
       border-color: var(--accent);
       background: rgba(255, 255, 255, 0.07);
-      box-shadow: 0 0 15px rgba(229, 9, 20, 0.25);
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.25);
     }
 
     .form-field textarea {
@@ -952,7 +957,8 @@
       gap: 10px;
       padding: 14px 28px;
       background: var(--accent);
-      color: #FFFFFF;
+      color: #040911;
+      font-weight: 700;
       border: none;
       border-radius: 10px;
       font-size: 14.5px;
@@ -960,13 +966,13 @@
       cursor: pointer;
       font-family: inherit;
       transition: all 0.25s ease;
-      box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
       margin-top: 6px;
     }
 
     .btn-send-message:hover {
       background: var(--accent-hover);
-      box-shadow: 0 8px 25px rgba(229, 9, 20, 0.6);
+      box-shadow: 0 8px 25px rgba(0, 210, 255, 0.6);
       transform: translateY(-2px);
     }
 
@@ -994,8 +1000,8 @@
   </style>
 </head>
 <body>
-  <!-- Fixed 4K Background Animation Canvas -->
-  <canvas id="animation-canvas"></canvas>
+    <!-- Fixed Background Canvas Scroll Animation -->
+  <canvas id="animation-canvas" aria-hidden="true"></canvas>
 
   <!-- Foreground Content Layer -->
   <div class="content-wrapper">
@@ -1744,173 +1750,249 @@
     </div>
   </div>
 
-  <!-- 4K Sliding-Window Animation Engine -->
+        <!-- High-Performance Smooth Frame Sequence Scroll Animation Engine -->
   <script>
     (function () {
-      const TOTAL_FRAMES = 300;
-      const WINDOW_RADIUS = 25; // Active window of 4K frames to keep memory light
       const canvas = document.getElementById('animation-canvas');
-      const ctx = canvas.getContext('2d', { alpha: false });
+      if (!canvas) return;
 
-      // Active 4K frames cache (Map of frameIndex -> HTMLImageElement)
-      const images = new Map();
-      const loading = new Set();
+      // Enable low-latency hardware-accelerated 2D context
+      const ctx = canvas.getContext('2d', {
+        alpha: false,
+        desynchronized: true
+      });
+      if (!ctx) return;
 
-      let targetProgress = 0;
-      let currentProgress = 0;
-      let lastRenderedIndex = -1;
-      let needsResize = true;
-      let activePrefix = null;
+      const TOTAL_FRAMES = 300;
+      const images = new Array(TOTAL_FRAMES + 1);
+      const isLoaded = new Uint8Array(TOTAL_FRAMES + 1);
 
-      const LERP_EASE = 0.15;
-
-      function pad(num) {
-        return String(num).padStart(3, '0');
-      }
-
-      const candidatePaths = [
-        'ezgif-8a8607c5a3703f44-png-split/ezgif-frame-',
-        './ezgif-frame-',
-        'ezgif-frame-',
-        '../ezgif-8a8607c5a3703f44-png-split/ezgif-frame-'
+      // Resilient candidate paths prioritizing enhanced 1080x1920 frames
+      const CANDIDATE_BASES = [
+        'ezgif-2e433ff707b17cf1-jpg/',
+        '../ezgif-2e433ff707b17cf1-jpg/',
+        'ezgif-8a8607c5a3703f44-png-split/ezgif-2e433ff707b17cf1-jpg/'
       ];
 
-      // Auto-detect prefix and load initial frames
-      function initLoader() {
-        let candidateIndex = 0;
+      let workingBase = CANDIDATE_BASES[0];
+      let targetProgress = 0;
+      let smoothProgress = 0;
+      let lastRenderedFrame = -1;
+      let lastRenderedWasFallback = false;
+      let currentTargetFrame = 1;
+      let isCanvasReady = false;
 
-        function tryPrefix() {
-          if (candidateIndex >= candidatePaths.length) return;
-          const prefix = candidatePaths[candidateIndex++];
-          const testImg = new Image();
-
-          testImg.onload = () => {
-            activePrefix = prefix;
-            images.set(1, testImg);
-            drawFrame(1);
-            lastRenderedIndex = 1;
-            manageSlidingWindow(1);
-          };
-
-          testImg.onerror = () => {
-            tryPrefix();
-          };
-
-          testImg.src = `${prefix}001.png`;
-        }
-
-        tryPrefix();
+      function getFrameFileName(index) {
+        return 'ezgif-frame-' + String(index).padStart(3, '0') + '.jpg';
       }
 
-      // Preload a specific frame with off-thread decode
-      function requestFrame(index) {
-        if (!activePrefix || images.has(index) || loading.has(index)) return;
-        loading.add(index);
-
-        const img = new Image();
-        img.onload = () => {
-          loading.delete(index);
-          images.set(index, img);
-          if ('decode' in img) {
-            img.decode().catch(() => {});
-          }
-        };
-        img.onerror = () => {
-          loading.delete(index);
-        };
-        img.src = `${activePrefix}${pad(index)}.png`;
+      function getFrameUrl(base, index) {
+        return base + getFrameFileName(index);
       }
 
-      // Dynamic sliding window: loads nearby 4K frames & evicts distant ones to prevent OOM
-      function manageSlidingWindow(centerIndex) {
-        if (!activePrefix) return;
-
-        const minIdx = Math.max(1, centerIndex - WINDOW_RADIUS);
-        const maxIdx = Math.min(TOTAL_FRAMES, centerIndex + WINDOW_RADIUS);
-
-        for (let i = minIdx; i <= maxIdx; i++) {
-          if (!images.has(i) && !loading.has(i)) {
-            requestFrame(i);
-          }
-        }
-
-        const evictionThreshold = WINDOW_RADIUS + 15;
-        for (const idx of images.keys()) {
-          if (idx !== 1 && Math.abs(idx - centerIndex) > evictionThreshold) {
-            images.delete(idx);
-          }
-        }
-      }
-
-      // Find closest available loaded 4K image
-      function getNearestImage(index) {
-        if (images.has(index)) {
-          const img = images.get(index);
-          if (img && img.naturalWidth > 0) return img;
-        }
-
-        for (let offset = 1; offset < TOTAL_FRAMES; offset++) {
-          const prev = index - offset;
-          if (images.has(prev)) {
-            const p = images.get(prev);
-            if (p && p.naturalWidth > 0) return p;
-          }
-          const next = index + offset;
-          if (images.has(next)) {
-            const n = images.get(next);
-            if (n && n.naturalWidth > 0) return n;
-          }
-        }
-
-        return images.get(1) || null;
-      }
-
-      // Responsive canvas sizing with 4K display support
+      // Responsive HiDPI / Retina Canvas Sizing
       function resizeCanvas() {
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        const targetW = Math.floor(window.innerWidth * dpr);
-        const targetH = Math.floor(window.innerHeight * dpr);
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        const targetW = Math.round(w * dpr);
+        const targetH = Math.round(h * dpr);
 
         if (canvas.width !== targetW || canvas.height !== targetH) {
           canvas.width = targetW;
           canvas.height = targetH;
-          needsResize = true;
+        }
+
+        // Apply high-quality bicubic image smoothing explicitly (reset on canvas size change)
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+
+        if (lastRenderedFrame > 0) {
+          renderFrame(lastRenderedFrame, true);
         }
       }
 
-      // Draw the 4K frame centered with optimal scaling
-      function drawFrame(frameIndex) {
-        const img = getNearestImage(frameIndex);
-        if (!img || !img.naturalWidth || !img.naturalHeight) return false;
+      // Crystal-Clear Adaptive Drawing:
+      // Preserves 100% native uncropped sharpness on widescreen without digital zoom blur,
+      // while providing a subtle atmospheric ambient fill across widescreen edges.
+      function drawImageCover(img) {
+        if (!img || !img.naturalWidth || !img.naturalHeight) return;
 
-        const cWidth = canvas.width;
-        const cHeight = canvas.height;
-        const imgWidth = img.naturalWidth;
-        const imgHeight = img.naturalHeight;
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth;
+        const ih = img.naturalHeight;
 
-        const cRatio = cWidth / cHeight;
-        const iRatio = imgWidth / imgHeight;
-
-        const ratioDiff = Math.abs(cRatio - iRatio) / iRatio;
-        const scale = ratioDiff < 0.04
-          ? Math.max(cWidth / imgWidth, cHeight / imgHeight)
-          : Math.min(cWidth / imgWidth, cHeight / imgHeight);
-
-        const destWidth = imgWidth * scale;
-        const destHeight = imgHeight * scale;
-        const destX = (cWidth - destWidth) / 2;
-        const destY = (cHeight - destHeight) / 2;
-
-        ctx.fillStyle = '#090909';
-        ctx.fillRect(0, 0, cWidth, cHeight);
-
+        // Clear canvas
+        ctx.clearRect(0, 0, cw, ch);
         ctx.imageSmoothingEnabled = true;
         ctx.imageSmoothingQuality = 'high';
-        ctx.drawImage(img, destX, destY, destWidth, destHeight);
-        return true;
+
+        const screenAspect = cw / ch;
+        const imgAspect = iw / ih;
+
+        if (screenAspect > imgAspect) {
+          // On widescreen desktop displays:
+          // 1. Atmospheric ambient fill (no stark black bars, covers full screen width)
+          const ambientScale = cw / iw;
+          const ambH = Math.round(ih * ambientScale);
+          const ambY = Math.round((ch - ambH) * 0.5);
+          ctx.globalAlpha = 0.22;
+          ctx.drawImage(img, 0, 0, iw, ih, 0, ambY, cw, ambH);
+
+          // 2. Crystal-Clear Foreground: Fit full 100vh height at 1:1 pin-sharp clarity!
+          ctx.globalAlpha = 1.0;
+          const sharpScale = ch / ih;
+          const nw = Math.round(iw * sharpScale);
+          const nh = ch;
+          const ox = Math.round((cw - nw) * 0.5);
+
+          ctx.drawImage(img, 0, 0, iw, ih, ox, 0, nw, nh);
+        } else {
+          // On portrait / mobile displays: standard seamless cover
+          const scale = Math.max(cw / iw, ch / ih);
+          const nw = Math.round(iw * scale);
+          const nh = Math.round(ih * scale);
+          const ox = Math.round((cw - nw) * 0.5);
+          const oy = Math.round((ch - nh) * 0.5);
+          ctx.globalAlpha = 1.0;
+          ctx.drawImage(img, 0, 0, iw, ih, ox, oy, nw, nh);
+        }
       }
 
-      // Read current scroll progress accurately from document scroll
+      function renderFrame(index, force) {
+        currentTargetFrame = index;
+        const isReady = isLoaded[index] && images[index];
+
+        // Skip redundant draw if already showing true crisp frame
+        if (!force && index === lastRenderedFrame && !lastRenderedWasFallback) {
+          return;
+        }
+
+        let imgToDraw = null;
+        let usedFallback = false;
+
+        if (isReady) {
+          imgToDraw = images[index];
+          usedFallback = false;
+        } else {
+          imgToDraw = findNearestLoadedImage(index);
+          usedFallback = true;
+        }
+
+        if (imgToDraw) {
+          drawImageCover(imgToDraw);
+          lastRenderedFrame = index;
+          lastRenderedWasFallback = usedFallback;
+        }
+      }
+
+      function findNearestLoadedImage(index) {
+        if (isLoaded[index] && images[index]) return images[index];
+        for (let step = 1; step < TOTAL_FRAMES; step++) {
+          const prev = index - step;
+          if (prev >= 1 && isLoaded[prev] && images[prev]) return images[prev];
+          const next = index + step;
+          if (next <= TOTAL_FRAMES && isLoaded[next] && images[next]) return images[next];
+        }
+        return null;
+      }
+
+      function loadSingleFrame(index, base) {
+        if (images[index]) return;
+        const img = new Image();
+        img.src = getFrameUrl(base, index);
+        img.onload = function () {
+          images[index] = img;
+          isLoaded[index] = 1;
+
+          if (!isCanvasReady && index === 1) {
+            isCanvasReady = true;
+            resizeCanvas();
+            renderFrame(1, true);
+          } else {
+            // If currently showing a degraded fallback for this position, re-render immediately to crisp full quality!
+            if (lastRenderedFrame === index && lastRenderedWasFallback) {
+              renderFrame(index, true);
+            } else if (currentTargetFrame === index) {
+              renderFrame(index, true);
+            }
+          }
+        };
+        images[index] = img;
+      }
+
+      // Preload nearby frames around scroll position to keep animation crisp during fast movement
+      function prioritizeNearby(centerIndex) {
+        const radius = 10;
+        for (let r = 1; r <= radius; r++) {
+          const next = centerIndex + r;
+          if (next <= TOTAL_FRAMES && !images[next]) {
+            loadSingleFrame(next, workingBase);
+          }
+          const prev = centerIndex - r;
+          if (prev >= 1 && !images[prev]) {
+            loadSingleFrame(prev, workingBase);
+          }
+        }
+      }
+
+      // Progressive Preloader: Instant Frame 1 -> Keyframes across timeline -> Full cache fill
+      function startPreloading(base) {
+        workingBase = base;
+        loadSingleFrame(1, base);
+
+        // Preload anchor keyframes across entire scroll range
+        for (let i = 1; i <= TOTAL_FRAMES; i += 5) {
+          loadSingleFrame(i, base);
+        }
+
+        const fillRemaining = function () {
+          for (let i = 2; i <= TOTAL_FRAMES; i++) {
+            if (!images[i]) {
+              loadSingleFrame(i, base);
+            }
+          }
+        };
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(fillRemaining, { timeout: 1000 });
+        } else {
+          setTimeout(fillRemaining, 50);
+        }
+      }
+
+      // Base path detection
+      function detectWorkingBasePath() {
+        let candidateIndex = 0;
+
+        function tryNext() {
+          if (candidateIndex >= CANDIDATE_BASES.length) {
+            startPreloading(CANDIDATE_BASES[0]);
+            return;
+          }
+
+          const base = CANDIDATE_BASES[candidateIndex];
+          const testImg = new Image();
+          testImg.onload = function () {
+            images[1] = testImg;
+            isLoaded[1] = 1;
+            isCanvasReady = true;
+            resizeCanvas();
+            renderFrame(1, true);
+            startPreloading(base);
+          };
+          testImg.onerror = function () {
+            candidateIndex++;
+            tryNext();
+          };
+          testImg.src = getFrameUrl(base, 1);
+        }
+
+        tryNext();
+      }
+
+      // Scroll Progress (0 to 1)
       function getScrollProgress() {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const maxScroll = Math.max(
@@ -1921,44 +2003,38 @@
         return Math.min(1, Math.max(0, scrollY / maxScroll));
       }
 
-      // 60-120fps Animation Loop
+      // Silky-smooth LERP easing (0.085) for frictionless 60-120fps glide
+      const LERP_EASE = 0.085;
+
       function tick() {
         targetProgress = getScrollProgress();
+        const diff = targetProgress - smoothProgress;
 
-        const diff = targetProgress - currentProgress;
-        if (Math.abs(diff) > 0.0001) {
-          currentProgress += diff * LERP_EASE;
+        if (Math.abs(diff) > 0.00005) {
+          smoothProgress += diff * LERP_EASE;
         } else {
-          currentProgress = targetProgress;
+          smoothProgress = targetProgress;
         }
 
-        const targetFrameIndex = Math.min(
+        const targetFrame = Math.min(
           TOTAL_FRAMES,
-          Math.max(1, Math.round(currentProgress * (TOTAL_FRAMES - 1)) + 1)
+          Math.max(1, Math.round(smoothProgress * (TOTAL_FRAMES - 1)) + 1)
         );
 
-        if (targetFrameIndex !== lastRenderedIndex || needsResize) {
-          if (drawFrame(targetFrameIndex)) {
-            lastRenderedIndex = targetFrameIndex;
-            needsResize = false;
-          }
-        }
-
-        manageSlidingWindow(targetFrameIndex);
+        renderFrame(targetFrame);
         requestAnimationFrame(tick);
       }
 
+      // Event Listeners
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas, { passive: true });
       window.addEventListener('scroll', () => {
         targetProgress = getScrollProgress();
+        const estFrame = Math.min(TOTAL_FRAMES, Math.max(1, Math.round(targetProgress * (TOTAL_FRAMES - 1)) + 1));
+        prioritizeNearby(estFrame);
       }, { passive: true });
 
-      window.addEventListener('resize', () => {
-        resizeCanvas();
-      });
-
-      // Start engine
-      resizeCanvas();
-      initLoader();
+      detectWorkingBasePath();
       requestAnimationFrame(tick);
     })();
 
@@ -2111,9 +2187,9 @@
           } catch (err) {
             // Direct email client fallback so no inquiry is ever lost
             statusMsg.style.display = 'block';
-            statusMsg.style.background = 'rgba(229, 9, 20, 0.15)';
-            statusMsg.style.color = '#FF6B6B';
-            statusMsg.style.border = '1px solid rgba(229, 9, 20, 0.35)';
+            statusMsg.style.background = 'rgba(239, 68, 68, 0.15)';
+            statusMsg.style.color = '#F87171';
+            statusMsg.style.border = '1px solid rgba(239, 68, 68, 0.35)';
             statusMsg.innerHTML = 'Opening email client to deliver to sreepadmanabhansp@gmail.com...';
             const mailto = `mailto:sreepadmanabhansp@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Inquiry from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
             window.location.href = mailto;
